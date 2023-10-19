@@ -1,0 +1,578 @@
+# Portfolio
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <style>
+        @import url(https://fonts.googleapis.com);
+        @import url(https://fonts.gstatic.com);
+        @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap);
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css);
+
+        @media (max-width: 768px) {
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+                margin: 80px 20px;
+            }
+
+            .firstsection>div {
+                width: 100%;
+            }
+
+            .rightsection img {
+                width: 100%;
+            }
+
+            .red,
+            .yellow,
+            .grey,
+            .black,
+            .key,
+            .abir {
+                margin: 0 20px;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .bar {
+            background-color: #fff;
+            height: 3px;
+            width: 25px;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        @media (max-width: 768px) {
+            /* ... (existing media query styles) ... */
+
+            .right ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .show {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 83px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-self: center;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(52, 52, 136);
+        }
+
+        .left {
+            font-size: 1.9rem;
+
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 190px;
+        }
+
+        .firstsection>div {
+            width: 40%;
+        }
+
+        .leftsection {
+            font-size: 3rem
+        }
+
+        .rightsection {
+            width: 23px 0;
+        }
+
+        .rightsection img {
+            width: 60%;
+        }
+
+        .purple {
+            color: rgb(177, 108, 241);
+        }
+
+        #element {
+            color: rgb(177, 108, 241);
+        }
+
+        .line {
+            margin: 50px 120px;
+        }
+
+        main section div ol li {
+            list-style-type: none;
+            margin: 20px;
+        }
+
+        .red {
+            width: 50vw;
+            margin: 80px 250px;
+        }
+
+        .red h1 {
+            color: rgb(177 108 241);
+        }
+
+        .yellow {
+            /* width: 50vw; */
+            margin: 0 250px;
+            height: 0px;
+        }
+
+        .yellow h1 {
+            color: rgb(177 108 241);
+        }
+
+        .grey {
+            margin: 20px 190 px;
+            display: flex;
+        }
+
+        .me {
+            color: rgb(177 108 241);
+        }
+
+        .you {
+            color: rgb(177 108 241);
+        }
+
+        .q {
+            color: rgb(177 108 241);
+        }
+
+        .w {
+            color: rgb(177 108 241);
+        }
+
+        .e {
+            color: rgb(177 108 241);
+        }
+
+        .parent h1 {
+            color: rgb(177 108 241);
+        }
+
+        footer {
+            background-color: rgb(18, 18, 62);
+        }
+
+        .key {
+            margin: 0 250px;
+            height: 0px;
+        }
+
+        .key h1 {
+            color: rgb(177 108 241);
+        }
+
+        .abir {
+            margin: 0 250px;
+        }
+
+        .abir h1 {
+            color: rgb(177 108 241);
+        }
+
+        .footer-links {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .footer-links li {
+            margin: 5px 0;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: rgb(177, 108, 241);
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            color: rgb(177, 108, 241);
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: rgb(18, 18, 62);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section {
+            flex: 1;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        .section.center {
+            text-align: center;
+            align-self: flex-end;
+            margin: 0;
+        }
+
+        .copyright {
+            color: rgb(177, 108, 241);
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .section h1 {
+            color: rgb(177, 108, 241);
+        }
+
+
+        /* New styles for mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+                margin: 80px 20px;
+            }
+
+            .firstsection>div {
+                width: 100%;
+            }
+
+            .rightsection img {
+                width: 100%;
+            }
+
+            .red,
+            .yellow,
+            .grey,
+            .black,
+            .key,
+            .abir {
+                margin: 0 20px;
+            }
+
+            nav ul {
+                display: none;
+                /* Hide the navigation links by default on small screens */
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger .bar {
+                background-color: #fff;
+                height: 3px;
+                width: 25px;
+                margin: 4px 0;
+                transition: 0.4s;
+            }
+
+            .right.show ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="all">
+        <header>
+            <nav>
+                <div class="left">
+                    <i class="fas fa-code"></i>
+                    Shantanu's Portfolio
+                </div>
+                <div class="right">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#op"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#cat"><i class="fas fa-laptop-code"></i> Projects</a></li>
+                        <li><a href="#po"><i class="fas fa-cogs"></i> Education</a></li>
+                        <li><a href="#boom"><i class="fas fa-envelope"></i> Contact Me</a></li>
+                    </ul>
+                </div>
+                <!-- <script>
+                    document.querySelector('.hamburger').addEventListener('click', function() {
+                        document.querySelector('nav ul').classList.toggle('show');
+                    });
+                </script> -->
+            </nav>
+        </header>
+
+        <main>
+            <section class="firstsection">
+                <div class="leftsection">Hi, My name is <span class="purple">Shantanu</span>
+                    <div>
+                        And I am a passionate
+                    </div>
+                    <span id="element"></span>
+                </div>
+                <div class="rightsection">
+                    <img src="photo_2023-10-12_20-45-43.png" alt="ERROR">
+                </div>
+            </section>
+            <section>
+                <div class="red" id="op">
+                    <h1>
+                        About Me
+                    </h1>
+                    <p>
+                        I am a passionate and driven Full Stack Developer with a strong foundation in HTML, CSS,
+                        JavaScript,
+                        and database management. I am constantly seeking new challenges to expand my skillset and create
+                        innovative web solutions. With a B.Tech degree in CSE, I bring a solid technical background to
+                        every
+                        project I undertake.
+                    </p>
+                </div>
+                <hr class="line">
+                <section class="grey">
+
+                    <div class="yellow" id="po">
+                        <h1>
+                            Education
+                        </h1>
+                        <div class="info">
+                            <li class="me">B.Tech in CSE</li>
+                            <span>Avantika University</span> 2022-2026 <br>
+                            <li class="you">Schooling </li>
+                            <span>St. Joseph Convent</span> Hr. Sec. School, Itarsi <br>
+
+                        </div>
+                    </div>
+                    <div class="parent">
+                        <h1>
+                            Skills
+                        </h1>
+                        <div class="child">
+                            <li class="q">Frontend Development:</li>
+                            <span>HTML5, CSS3, JavaScript (ES6+), React.js, Vue.js</span> <br>
+                            <li class="w">Backend Development:</li>
+                            <span>Node.js, Express.js, Python, Django</span> <br>
+                        </div>
+                    </div>
+                    <div class="key">
+                        <h1>
+                            LAUNGUAGES
+                        </h1>
+                        <div>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>MY SQL</li>
+                                <li>PYTHON</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <hr class="line">
+                <section>
+                    <div class="abir" id="cat">
+                        <h1>
+                            Projects
+                        </h1>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi autem, voluptates
+                            possimus impedit nobis repudiandae beatae dignissimos esse rerum debitis? Ipsum quia
+                            possimus
+                            dolorem excepturi ratione ab aliquid sapiente suscipit distinctio! Delectus sunt blanditiis
+                            quo
+                            cumque laborum voluptate porro placeat hic at eum ut quisquam quae, suscipit eligendi ipsam.
+                        </p>
+                        <br>
+                        <p2>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi modi porro mollitia? Id
+                            libero
+                            dolorum debitis voluptas obcaecati ullam at impedit eos, minima veniam a accusamus maxime
+                            sit
+                            nam perferendis deserunt perspiciatis asperiores quod. Ratione nisi unde maiores error
+                            deserunt
+                            tenetur maxime fuga incidunt, hic numquam ipsam perspiciatis? Aspernatur, eum!
+                        </p2>
+                    </div>
+                </section>
+                <hr class="line">
+                <footer class="footer">
+                    <div class="section" id="boom">
+                        <h1>CONTACT INFO</h1>
+                        <div class="real">
+                            <ol class="footer-links">
+                                <li>Phone No. :- +917049058213</li>
+                                <li><a href="mailto:shantanugupta0206@gmail.com">Email</a> :- Shantanu's E-mail</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h1>OTHER LINKS</h1>
+                        <div class="real">
+                            <ol class="footer-links">
+                                <li><a href="https://www.linkedin.com/in/yourprofile">Linked In</a> </li>
+                                <li><a href="https://github.com/">Git Hub</a> </li>
+                                <li><a href="https://twitter.com/">Twitter</a> </li>
+                                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="section center">
+                        <div class="copyright">
+                            &copy; 2023 Shantanu Gupta
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </main>
+        <section>
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+            <script>
+                var typed = new Typed('#element', {
+                    strings: ['Web Developer', 'Learner', 'Web Designer', 'Web User', 'Coder', 'Tech Enthusiast', 'Full Stack Developer'],
+                    typeSpeed: 40,
+                });
+
+            </script>
+            <!-- <script>
+                const element = document.getElementById('element');
+                const strings = ['Web Developer', 'Learner', 'Web Designer', 'Web User', 'Coder', 'Tech Enthusiast', 'Full Stack Developer'];
+            
+                let currentStringIndex = 0;
+                let currentCharIndex = 0;
+            
+                function typeNextCharacter() {
+                    if (currentStringIndex < strings.length && currentCharIndex < strings[currentStringIndex].length) {
+                        element.textContent += strings[currentStringIndex][currentCharIndex];
+                        currentCharIndex++;
+                        setTimeout(typeNextCharacter, 10); // Adjust the timeout value (milliseconds) for the desired speed
+                    } else {
+                        currentStringIndex++;
+                        currentCharIndex = 0;
+                        setTimeout(typeNextCharacter, 10); // Adjust the timeout value (milliseconds) for the desired speed
+                    }
+                }
+            
+                typeNextCharacter();
+            </script> -->
+            <!-- <script>
+                const element = document.getElementById('element');
+                const strings = ['Web Developer', 'Learner', 'Web Designer', 'Web User', 'Coder', 'Tech Enthusiast', 'Full Stack Developer'];
+            
+                let currentStringIndex = 0;
+                let currentCharIndex = 0;
+            
+                function typeNextCharacter() {
+                    if (currentCharIndex < strings[currentStringIndex].length) {
+                        element.textContent += strings[currentStringIndex][currentCharIndex];
+                        currentCharIndex++;
+                        setTimeout(typeNextCharacter, 10); // Adjust the timeout value (milliseconds) for the desired speed
+                    } else {
+                        setTimeout(eraseString, 1000); // Adjust the timeout value (milliseconds) before erasing
+                    }
+                }
+            
+                function eraseString() {
+                    if (element.textContent.length > 0) {
+                        element.textContent = element.textContent.slice(0, -1);
+                        setTimeout(eraseString, 10); // Adjust the timeout value (milliseconds) for the desired speed
+                    } else {
+                        currentStringIndex++;
+                        currentCharIndex = 0;
+                        if (currentStringIndex >= strings.length) {
+                            currentStringIndex = 0; // Loop back to the beginning
+                        }
+                        setTimeout(typeNextCharacter, 10); // Adjust the timeout value (milliseconds) for the desired speed
+                    }
+                }
+            
+                typeNextCharacter();
+            </script> -->
+            <script>
+                document.querySelector('.hamburger').addEventListener('click', function () {
+                    document.querySelector('nav ul').classList.toggle('show');
+                });
+            </script>
+
+
+        </section>
+    </section>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('.right').classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
